@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>AZ Store</title>
+  </head>
+
+  <body>
+    
+    <header class="header">
+      <div class="header-content">
+        <h1 class="logo">AZ.Store</h1>
+        <nav class="navbar">
+          <button
+            class="navbar-toggle"
+            id="navbar-toggle"
+            aria-label="Toggle navigation"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <ul id="navbar-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li>
+              <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+            </li>
+
+            <li><a href="login.html">LogOut</a></li>
+            <li class="dropdown" style="position: relative">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                onclick="event.preventDefault();document.getElementById('profile-dropdown').classList.toggle('show');"
+                style="display: inline-block"
+              >
+                <img
+                  src="./assets/WhatsApp_Image_2025-02-28_at_13.35.54_4771104f-removebg-preview.png"
+                  alt="Profile"
+                  class="profile-nav-img"
+                  style="
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+              </a>
+              <ul
+                id="profile-dropdown"
+                class="dropdown-menu"
+                style="
+                  display: none;
+                  position: absolute;
+                  right: 0;
+                  top: 50px;
+                  background-color: #222;
+                  color: #c8c3c3;
+                  min-width: 140px;
+                  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                  border-radius: 8px;
+                  padding: 8px 0;
+                  z-index: 999;
+                "
+              >
+                <li style="padding: 8px 20px">
+                  <a href="profile.html" style="text-decoration: none"
+                    >Profile</a
+                  >
+                </li>
+                <li style="padding: 8px 20px">
+                  <a
+                    href="#"
+                    onclick="localStorage.clear();location.href='login.html'"
+                    style="text-decoration: none"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h2>Welcome to MyShop</h2>
+        <p>
+          Discover amazing products at unbeatable prices. Shop now for the best
+          deals!
+        </p>
+        <button class="shop-now" onclick="window.location.href='#products'">
+          Start Shopping
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for products"
+        />
+        <button id="search-btn">Search</button>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <h2>Our Products</h2>
+      <div class="products-grid" id="products-grid"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div><h1 class="logo">AZ.Store</h1></div>
+
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/mohamed-osama-abuzahda-1b8a05256"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/mohamedabuzahda" target="_blank"
+            ><i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:ososm456@gmail.com"
+            ><i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="cart.html">Cart</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; 2025 <span class="logo">AZ.Store.</span> All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/cart.js"></script>
+    <script src="./scripts/auth-guard.js"></script>
+  </body>
+</html>

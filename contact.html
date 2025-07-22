@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <h1 class="logo">AZ.Store</h1>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+
+            <li>
+              <a href="profile.html"
+                ><img
+                  src="./assets/WhatsApp_Image_2025-02-28_at_13.35.54_4771104f-removebg-preview.png"
+                  alt="Profile"
+                  class="profile-nav-img"
+                  style="
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="contact-container" style="background-color: black">
+        <h1>CONTACT US</h1>
+
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="enter your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" placeholder="enter your address" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" placeholder="enter your phone" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="enter your email" />
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country">
+              <option value="EG">Egy</option>
+              <option value="US">United States</option>
+              <option value="UK">United Kingdom</option>
+              <option value="CA">Canada</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="button-group">
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div><h1 class="logo">AZ.Store</h1></div>
+
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/mohamed-osama-abuzahda-1b8a05256"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/mohamedabuzahda" target="_blank"
+            ><i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:ososm456@gmail.com"
+            ><i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="cart.html">Cart</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; 2025 <span class="logo">AZ.Store.</span> All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Form submitted! (This is a demo)");
+        });
+    </script>
+  </body>
+</html>
